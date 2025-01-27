@@ -1,0 +1,41 @@
+
+*{
+   font-family: Arial; /*changing the font for everything*/
+}
+h1{
+    text-align: center; /*making text be i the center in h1*/
+}
+#navigation ul { /*by just targetting il, it applies styles to list itself, not items inside*/
+    display:flex; /*to make the list horizontal*/
+    list-style: none; /* to remove bullet points*/
+    padding: 0; /*removes default padding*/
+    
+}
+#navigation ul li a {
+    padding: 10px; /*add padding around each link*/
+    text-decoration:none; /*removes underline*/
+    color:black;
+    font-size: 22px;
+}
+
+#navigation ul li a:hover{
+    color: blue; /*changes the link colour when you hover*/
+}
+.post{
+    background-color: lightgrey; /*adds background colour just to this area*/
+    padding:20px;
+}
+.post.featured{
+    border: 2px solid red; /*red border for featured posts only*/
+}
+.post p:first-of-type{ /*changes the first p details*/
+    font-weight: bold;
+}
+.post-meta{
+    font-size: 18px;
+    font-style:italic;
+}
+footer{
+    background-color: cyan;
+    text-align: center;
+}
