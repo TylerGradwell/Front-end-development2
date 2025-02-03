@@ -1,0 +1,48 @@
+*{
+    font-family: Arial, sans-serif; /*changing the font for everything*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+.main-header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+ .logo-container{
+    margin-right: 20px;
+ }
+ .logo{
+    height: 80px;
+    width: auto;
+ }
+ #navigation ul { /*by just targetting il, it applies styles to list itself, not items inside*/
+     display:flex; /*to make the list horizontal*/
+     list-style: none; /* to remove bullet points*/
+     padding: 0; /*removes default padding*/
+     
+ }
+ #navigation ul li a {
+     padding: 10px; /*add padding around each link*/
+     text-decoration:none; /*removes underline*/
+     color:black;
+     font-size: 22px;
+ }
+ 
+ #navigation ul li a:hover{
+     color: burlywood; /*changes the link colour when you hover*/
+ }
+ .Article{
+    background-color: lightgrey; /*adds background colour just to this area*/
+    padding:20px;
+    display: flex;
+    padding: 20;
+}
+
+.Article p:first-of-type{ /*changes the first p details*/
+    font-weight: bold;
+}
+.Article_info{
+    font-size: 18px;
+    font-style:italic;
+}
