@@ -1,48 +1,345 @@
-*{
-    font-family: Arial, sans-serif; /*changing the font for everything*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
-.main-header{
+    font-family: 'Inter', sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+.navigation {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    padding: 10px;
 }
- .logo-container{
-    margin-right: 20px;
- }
- .logo{
-    height: 80px;
-    width: auto;
- }
- #navigation ul { /*by just targetting il, it applies styles to list itself, not items inside*/
-     display:flex; /*to make the list horizontal*/
-     list-style: none; /* to remove bullet points*/
-     padding: 0; /*removes default padding*/
-     
- }
- #navigation ul li a {
-     padding: 10px; /*add padding around each link*/
-     text-decoration:none; /*removes underline*/
-     color:black;
-     font-size: 22px;
- }
- 
- #navigation ul li a:hover{
-     color: burlywood; /*changes the link colour when you hover*/
- }
- .Article{
-    background-color: lightgrey; /*adds background colour just to this area*/
-    padding:20px;
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #444;
+    padding: 5px;
+    border-radius: 5px;
+}
+.navbar-headers {
+    text-align: right;
+    margin-top: 8px;
+}
+.navbar-headers a {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.navbar-headers a:hover {
+    color: #2D8E2B;
+}
+.banner {
+    background-color: #333;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.banner-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+.banner-title span {
+    color: #2D8E2B;
+}
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
-    padding: 20;
+    gap: 10px;
+}
+.search-input {
+    width: 500px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+}
+.search-button {
+    background-color: #2D8E2B;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.search-button:hover {
+    background-color: #236f22;
+}
+.search-button i {
+    color: white;
+    font-size: 18px;
+}
+.design {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.title h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 8px;
+}
+.title p {
+    color: #666;
+    font-size: 18px;
+}
+.trending {
+    display: grid;
+    grid-template-columns: 250px 850px;
+    gap: 30px;
+}
+.sidebar {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px #ddd;
+    height: fit-content;
+}
+.sidebar-title h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2D8E2B;
+}
+.sidebar-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar-article {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.sidebar-article a {
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.sidebar-article a:hover {
+    color: #2D8E2B;
+}
+.tech-content {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 20px;
+}
+.tech-post {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px #ddd;
+}
+.tech-image {
+    position: relative;
+    overflow: hidden;
+}
+.tech-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.tech-image .likes-count {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: #2D8E2B;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1;
+}
+.tech-image .tech-category {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #2D8E2B;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1;
+}
+.tech-title {
+    padding: 20px;
+}
+.tech-title a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+.tech-title a:hover {
+    color: #2D8E2B;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 300px 600px;
+    gap: 30px;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-logo .navbar-brand {
+    margin-bottom: 15px;
+}
+.footer-links {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    gap: 30px;
+}
+.footer-section h4 {
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2D8E2B;
+}
+.footer-section ul {
+    list-style-type: none;
+}
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+.social-icon {
+    font-size: 24px;
+    color: white;
+}
+.social-icon:hover {
+    color: #2D8E2B;
+}
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+.footer-section ul li a,
+.footer-legal a {
+    color: white;
 }
 
-.Article p:first-of-type{ /*changes the first p details*/
-    font-weight: bold;
+.footer-section ul li a:hover,
+.footer-legal a:hover {
+    color: #2D8E2B;
 }
-.Article_info{
-    font-size: 18px;
-    font-style:italic;
+@media screen and (max-width: 1024px) {
+    .tech-content {
+        grid-template-columns: repeat(2, 270px);
+        justify-content: center;
+    }
+    .trending {
+        grid-template-columns: 200px 500px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .tech-content {
+        grid-template-columns: 270px;
+        justify-content: center;
+    }
+    .trending {
+        grid-template-columns: 270px;
+        justify-content: center;
+    }
+    .sidebar {
+        order: 2;
+        width: 270px;
+        margin: 0 auto;
+    }
+    .footer-content {
+        grid-template-columns: 100%;
+    }
+    .footer-links {
+        grid-template-columns: 100%;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .footer-legal {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .banner-title {
+        font-size: 32px;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .search-button {
+        width: 100%;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .footer {
+        padding: 30px 0 15px;
+    }
+    .footer-section h4 {
+        text-align: center;
+    }
+    .footer-section ul {
+        text-align: center;
+    }
 }
