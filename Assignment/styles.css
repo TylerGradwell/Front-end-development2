@@ -1,3 +1,5 @@
+/*my personal code starts here. None of this is borrowed code from online. This first code is for my main webpage, I also reuse this css in some of 
+my other html files to make things quicker*/
 * {
     margin: 0;
     padding: 0;
@@ -216,6 +218,34 @@ form {
 .tech-title a:hover {
     color: #2D8E2B;
 }
+#carouselExampleAutoplaying {
+    width: 810px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 0;
+}
+#carouselExampleAutoplaying .carousel-item img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+#carouselExampleAutoplaying .carousel-caption {
+    background-color: #333;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: left;
+}
+#carouselExampleAutoplaying .carousel-caption h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+#carouselExampleAutoplaying .carousel-caption p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
 .footer {
     background-color: #333;
     color: white;
@@ -285,17 +315,6 @@ form {
 .footer-legal a:hover {
     color: #2D8E2B;
 }
-#carouselExampleAutoplaying {
-    width: 850px;
-    margin: 0 auto;
-    background-color: #f5f5f5;
-    padding: 0;
-}
-#carouselExampleAutoplaying .carousel-item img {
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
-}
 @media screen and (max-width: 1024px) {
     .tech-content {
         grid-template-columns: repeat(2, 270px);
@@ -334,6 +353,15 @@ form {
     .footer-legal {
         justify-content: center;
     }
+    #carouselExampleAutoplaying {
+        width: 100%;
+    }
+    #carouselExampleAutoplaying .carousel-caption h5 {
+        font-size: 18px;
+    }
+    #carouselExampleAutoplaying .carousel-caption p {
+        font-size: 13px;
+    }
 }
 @media screen and (max-width: 480px) {
     .banner-title {
@@ -357,4 +385,12 @@ form {
     .footer-section ul {
         text-align: center;
     }
+}
+/*end of the main index.html code, start of gaming.html code. Still all personal code, none borrowed from any online resource*/
+
+.gaming-content{
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    justify-content: center;
+    gap: 20px;
 }
